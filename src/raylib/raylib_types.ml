@@ -306,6 +306,8 @@ module Texture = struct
 
   type t = t' ctyp
 
+  let id texture = getf texture Types.Texture.id
+
   let width texture = getf texture Types.Texture.width
 
   let height texture = getf texture Types.Texture.height
@@ -321,6 +323,8 @@ module RenderTexture = struct
   type t' = Types.RenderTexture.t
 
   type t = t' ctyp
+
+  let id texture = getf texture Types.RenderTexture.id
 
   let texture rendertexture = getf rendertexture Types.RenderTexture.texture
 

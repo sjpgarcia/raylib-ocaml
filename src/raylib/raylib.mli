@@ -894,6 +894,9 @@ module Texture : sig
 
   type t = t' ctyp
 
+  val id : t -> Unsigned.uint
+  (** Texture ID *)
+
   val width : t -> int
   (** Texture base width *)
 
@@ -913,6 +916,9 @@ module RenderTexture : sig
   type t'
 
   type t = t' ctyp
+
+  val id : t -> Unsigned.uint
+  (** Texture ID *)
 
   val texture : t -> Texture.t
   (** Color buffer attachment texture *)
